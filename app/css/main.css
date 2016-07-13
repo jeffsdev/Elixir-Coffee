@@ -348,6 +348,47 @@ header {
   color: white; }
 
 #contact {
-  background: #333436; }
-  #contact .footer-header {
+  background: #333436;
+  padding: 0 2%; }
+  #contact .contact-header {
     padding: 25px 2%; }
+    #contact .contact-header .footer-logo {
+      display: flex;
+      margin: auto;
+      justify-content: center; }
+      #contact .contact-header .footer-logo img {
+        max-height: 50px;
+        margin-right: 10px; }
+      #contact .contact-header .footer-logo h2 {
+        padding-top: 14px;
+        color: white; }
+  #contact .contact-main {
+    display: flex;
+    flex-wrap: wrap; }
+    #contact .contact-main p, #contact .contact-main span, #contact .contact-main a, #contact .contact-main button {
+      color: white; }
+    #contact .contact-main .footer-column {
+      border: 1px solid orange;
+      flex: 1 2;
+      text-align: center; }
+      #contact .contact-main .footer-column div:nth-child(2) {
+        margin: 25px; }
+      #contact .contact-main .footer-column h4 {
+        margin: 1rem 0; }
+    #contact .contact-main #contact-form input, #contact .contact-main #contact-form textarea {
+      display: block;
+      margin: 1rem auto;
+      padding: 10px 0;
+      width: 75%;
+      background: none;
+      border: none;
+      border-bottom: 1px solid #999; }
+    #contact .contact-main #contact-form button {
+      display: block;
+      border: 1px solid #4e3b2d;
+      padding: 10px;
+      text-align: right;
+      margin: auto; }
+  #contact .footer-bottom {
+    background: #222;
+    color: white; }

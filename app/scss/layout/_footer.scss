@@ -1,7 +1,67 @@
 #contact {
   background: $dark-gray;
-  .footer-header {
+  padding: 0 2%;
+  .contact-header {
     padding: 25px 2%;
+
+    .footer-logo {
+      // border: 1px solid red;
+      display: flex;
+      margin: auto;
+      justify-content: center;
+      img {
+        max-height: 50px;
+        margin-right: 10px;
+      }
+      h2 {
+        padding-top: 14px;
+        color: white;
+      }
+    }
+  }
+
+
+  .contact-main {
+    display: flex;
+    flex-wrap: wrap;
+    p, span, a, button {
+      color: white;
+    }
+    .footer-column {
+      border: 1px solid orange;
+      flex: 1 2;
+      text-align: center;
+      div:nth-child(2) {
+        margin: 25px;
+      }
+      h4 {
+        margin: 1rem 0;
+      }
+    }
+    #contact-form {
+      input, textarea {
+        display: block;
+        margin: 1rem auto;
+        padding: 10px 0;
+        width: 75%;
+        background: none;
+        border: none;
+        border-bottom: 1px solid #999;
+      }
+      button {
+        display: block;
+        border: 1px solid $coffee-brown;
+        padding: 10px;
+        text-align: right;
+        margin: auto;
+      }
+    }
+
+  }
+
+  .footer-bottom {
+    background: #222;
+    color: white;
   }
 
 }
