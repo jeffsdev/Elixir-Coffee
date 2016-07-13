@@ -63,6 +63,10 @@ button {
 a {
   text-decoration: none; }
 
+p {
+  line-height: 1.25em;
+  padding: 0.5rem 0; }
+
 button {
   overflow: visible;
   border: 0;
@@ -80,6 +84,10 @@ img {
   max-width: 100%;
   height: auto;
   border: 0; }
+
+.container {
+  max-width: 1400px;
+  margin: auto; }
 
 nav {
   padding: 0 2%;
@@ -226,3 +234,52 @@ header {
       text-shadow: 1px 1px 3px gray; }
   header #herovideo {
     width: 100%; }
+
+#about {
+  padding: 25px 2%;
+  background: #e7e6e2; }
+  #about .about-content {
+    display: flex;
+    flex-wrap: wrap; }
+  #about .about-img {
+    order: 2;
+    width: 100%; }
+  #about .about-us {
+    order: 1;
+    width: 100%;
+    border: 1px solid red; }
+    #about .about-us h2 {
+      text-align: center;
+      margin-bottom: 1rem; }
+    #about .about-us h3 {
+      margin: 1em 0;
+      text-align: right; }
+
+#locations {
+  padding: 25px 2%;
+  background: #333436;
+  color: white; }
+  #locations .locations-content {
+    display: flex;
+    flex-wrap: wrap; }
+  #locations .locations-img {
+    display: flex;
+    justify-content: space-between; }
+    #locations .locations-img img {
+      display: block;
+      width: 45%;
+      flex: 0 1 auto;
+      height: 100%; }
+  #locations .locations-addresses {
+    border: 1px solid blue;
+    margin: auto; }
+    #locations .locations-addresses h3 {
+      margin: 1rem 0;
+      text-align: center; }
+    #locations .locations-addresses img {
+      max-width: 20px;
+      max-height: 20px;
+      vertical-align: middle;
+      margin-right: 10px; }
+    #locations .locations-addresses img:nth-of-type(2) {
+      margin: 1rem 10px 1rem 0; }
