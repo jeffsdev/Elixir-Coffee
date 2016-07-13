@@ -1,0 +1,21 @@
+#quotes {
+  padding: 25px 2%;
+  background: $coffee-brown;
+  .quotes-content {
+    display: flex;
+    width: 50%;
+    color: white;
+    span:not(.quotesource) {
+      border: 1px solid orange;
+      font-size: 5em;
+      margin: 0 25px;
+    }
+    .quotesource {
+      display: block;
+      border: 1px solid red;
+      text-align: center;
+      font-size: 1.5em;
+      margin-top: 1em;
+    }
+  }
+}

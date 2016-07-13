@@ -283,3 +283,21 @@ header {
       margin-right: 10px; }
     #locations .locations-addresses img:nth-of-type(2) {
       margin: 1rem 10px 1rem 0; }
+
+#quotes {
+  padding: 25px 2%;
+  background: #4e3b2d; }
+  #quotes .quotes-content {
+    display: flex;
+    width: 50%;
+    color: white; }
+    #quotes .quotes-content span:not(.quotesource) {
+      border: 1px solid orange;
+      font-size: 5em;
+      margin: 0 25px; }
+    #quotes .quotes-content .quotesource {
+      display: block;
+      border: 1px solid red;
+      text-align: center;
+      font-size: 1.5em;
+      margin-top: 1em; }
