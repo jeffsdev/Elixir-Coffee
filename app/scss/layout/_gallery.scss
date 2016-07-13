@@ -2,6 +2,10 @@
   .gallery-header {
     padding: 25px 2%;
     background: $dark-gray;
+    background-image: url("../img/beans-bw.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
     color: white;
   }
 }

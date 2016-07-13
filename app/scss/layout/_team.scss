@@ -7,11 +7,56 @@
   .team-members {
     display: flex;
     flex-wrap: wrap;
-    img {
-      flex: 1 1 auto;
-      height: 100%;
+    .team-member-picture {
+      height: 200px;
+      min-width: 16.66%;
       width: 50%;
+      background: $dark-gray;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      @media screen and #{$tablet} {
+        width: 33.33%;
+        height: 320px;
+      }
+      @media screen and #{$desktop} {
+        width: 16.666%;
+        height: 480px;
+      }
     }
+    .member1 {
+      background-image: url("../img/team1.jpg");
+    }
+    .member2 {
+      background-image: url("../img/team2.jpg");
+    }
+    .member3 {
+      background-image: url("../img/team3.jpg");
+    }
+    .member4 {
+      background-image: url("../img/team4.jpg");
+      @media screen and #{$desktop} {
+        background-position: 65%;
+      }
+    }
+    .member5 {
+      background-image: url("../img/team5.jpg");
+      background-position: left;
+      @media screen and #{$desktop} {
+        background-position: 25%;
+      }
+    }
+    .member6 {
+      background-image: url("../img/team6.jpg");
+      @media screen and #{$desktop} {
+        background-position: 45%;
+      }
+    }
+    // img {
+    //   flex: 1 1 auto;
+    //   height: 100%;
+    //   width: 50%;
+    // }
   }
   .team-message {
     background: $alt-blue;

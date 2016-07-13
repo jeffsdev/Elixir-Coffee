@@ -1,6 +1,10 @@
 #quotes {
   padding: 25px 2%;
   background: $coffee-brown;
+  background-image: url("../img/grinder.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
   .quotes-content {
     display: flex;
     width: 100%;
