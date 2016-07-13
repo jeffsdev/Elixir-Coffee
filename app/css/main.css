@@ -289,15 +289,37 @@ header {
   background: #4e3b2d; }
   #quotes .quotes-content {
     display: flex;
-    width: 50%;
+    width: 100%;
     color: white; }
     #quotes .quotes-content span:not(.quotesource) {
       border: 1px solid orange;
-      font-size: 5em;
-      margin: 0 25px; }
+      font-size: 5em; }
     #quotes .quotes-content .quotesource {
       display: block;
       border: 1px solid red;
       text-align: center;
       font-size: 1.5em;
       margin-top: 1em; }
+    #quotes .quotes-content p {
+      margin: 0 25px; }
+
+#ourteam {
+  background: #e7e6e2;
+  text-align: center; }
+  #ourteam h2 {
+    padding: 25px 2%; }
+  #ourteam .team-members {
+    display: flex;
+    flex-wrap: wrap; }
+    #ourteam .team-members img {
+      flex: 1 1 auto;
+      height: 100%;
+      width: 50%; }
+  #ourteam .team-message {
+    background: #2a343e;
+    padding: 25px 2%; }
+    #ourteam .team-message p {
+      font-size: 1.5em;
+      color: white;
+      max-width: 1024px;
+      margin: auto; }
