@@ -1,0 +1,29 @@
+header {
+  position: relative;
+  min-height: calc(75vh - 75px);
+  max-height: calc(90vh - 75px);
+  background-image: url("../img/coffee-bw.jpg");
+  background-size: cover;
+  background-position: center;
+
+
+  .hero-content {
+    position: absolute;
+    border: 1px solid red;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    h1 {
+      font-size: 6em;
+      font-weight: 100;
+      color: white;
+      text-shadow: 1px 1px 3px gray;
+    }
+  }
+  #herovideo {
+    width: 100%;
+  }
+}

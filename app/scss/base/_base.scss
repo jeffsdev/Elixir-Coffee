@@ -7,13 +7,19 @@ html {
 *, *:before, *:after {
   box-sizing: inherit;
 }
-
 body {
   margin: 0;
-  font: 16px/1 sans-serif;
+  font: 16px/1 'Josefin Slab', sans-serif;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
 }
+
+h1 {font-size: 48px;} /* 3em */
+h2 {font-size: 36px;} /* 2.25em */
+h3 {font-size: 24px;} /* 1.5em */
+h4 {font-size: 20px;} /* 1.25em */
+h5 {font-size: 18px;} /* 1.125em */
+h6 {font-size: 16px;} /* 1em */
 
 h1,
 h2,
@@ -31,13 +37,6 @@ ul {
 main,
 li {
   display: block;
-}
-
-h1,
-h2,
-h3,
-h4 {
-  font-size: inherit;
 }
 
 strong {

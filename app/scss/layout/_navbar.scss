@@ -1,0 +1,149 @@
+nav {
+  padding: 0 2%;
+  display: flex;
+  justify-content: space-between;
+  background: #999;
+  height: 50px;
+  .brand {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    border: 1px solid red;
+    a {
+      display: flex;
+      align-items: center;
+      border: 1px solid blue;
+      img {
+        max-height: 35px;
+        margin-right: 10px;
+        @media screen and #{$tablet} {
+          max-height: 50px;
+        }
+      }
+      span {
+        font-size: 1em;
+        padding-top: 3px;
+        width: 50%;
+        @media screen and #{$tablet} {
+          font-size: 1.75em;
+        }
+      }
+    }
+  }
+  .nav-menu {
+    display: none;
+    border: 1px solid blue;
+    a {
+      line-height: 75px;
+      border: 1px solid red;
+      display: block;
+      height: 100%;
+      padding: 0 25px;
+      font-size: 1em;
+      @media screen and #{$desktop} {
+        font-size: 1.25em;
+      }
+    }
+    @media screen and #{$desktop} {
+      display: flex;
+    }
+  }
+  @media screen and #{$tablet} {
+    height: 75px;
+  }
+}
+
+
+
+
+
+
+
+
+.nav-burger {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 50px;
+  height: 50px;
+  padding: 10px 0;
+  cursor: pointer;
+  span {
+    display: block;
+    width: 80%;
+    height: 5%;
+    margin: auto;
+    background: white;
+  }
+  @media screen and #{$tablet} {
+    height: 75px;
+    width: 65px;
+  }
+  @media screen and #{$desktop} {
+    display: none;
+  }
+}
+
+
+.mobile-menu {
+  position: fixed;
+  top: 50px;
+  bottom: 0;
+  width: 60%;
+  right: -768px;
+  height: 100%;
+  transform: translate(0px, 0px);
+  transition: .60s ease;
+  background: #111;
+  color: #fff;
+  z-index: 99999999;
+  @media screen and #{$tablet} {
+    top: 75px;
+  }
+  @media screen and #{$desktop} {
+    display: none;
+  }
+}
+
+.mobile-menu.active {
+  transform: translate(-768px, 0px);
+}
+
+.mobile-menu {
+  ul {
+    display: none;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    // margin-top: 50px;
+  }
+
+  ul.active {
+    display: block;
+  }
+
+  li {
+    border-top: 1px solid #555;
+    text-align: right;
+    background: none;
+    transition: 0.3s;
+  }
+
+  li:last-child {
+    border-bottom: 1px solid #555;
+  }
+
+  li:hover {
+    background: #223;
+    transition: 0.3s;
+  }
+
+  li a {
+    display: block;
+    padding: 25px 5%;
+    text-decoration: none;
+    color: #ccc;
+    font-size: 1rem;
+    font-family: sans-serif;
+  }
+}
