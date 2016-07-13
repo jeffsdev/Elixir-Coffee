@@ -1,0 +1,30 @@
+#blogposts {
+  padding: 25px 2%;
+
+
+
+  .blogpost {
+    // border: 1px solid red;
+    width: 75%;
+    margin: 25px auto;
+
+    img, span {
+      margin-bottom: 0.5rem;
+    }
+
+    span {
+      display: block;
+    }
+
+    .readmore {
+      display: block;
+      background: $coffee-brown;
+      color: white;
+      width: 150px;
+      padding: 10px 0;
+      margin: 1rem auto;
+      text-align: center;
+    }
+  }
+
+}

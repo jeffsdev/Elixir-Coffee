@@ -323,3 +323,31 @@ header {
       color: white;
       max-width: 1024px;
       margin: auto; }
+
+#blogposts {
+  padding: 25px 2%; }
+  #blogposts .blogpost {
+    width: 75%;
+    margin: 25px auto; }
+    #blogposts .blogpost img, #blogposts .blogpost span {
+      margin-bottom: 0.5rem; }
+    #blogposts .blogpost span {
+      display: block; }
+    #blogposts .blogpost .readmore {
+      display: block;
+      background: #4e3b2d;
+      color: white;
+      width: 150px;
+      padding: 10px 0;
+      margin: 1rem auto;
+      text-align: center; }
+
+#gallery .gallery-header {
+  padding: 25px 2%;
+  background: #333436;
+  color: white; }
+
+#contact {
+  background: #333436; }
+  #contact .footer-header {
+    padding: 25px 2%; }
