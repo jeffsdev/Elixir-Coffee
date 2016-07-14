@@ -225,8 +225,7 @@ nav {
 
 header {
   position: relative;
-  min-height: 100vh;
-  max-height: 100vh;
+  max-width: 100vw;
   background-image: url("../img/coffee-bw.jpg");
   background-size: cover;
   background-position: center; }
@@ -237,14 +236,27 @@ header {
     justify-content: center;
     text-align: center;
     width: 100%;
-    height: 100%; }
+    height: 100%;
+    z-index: 9999; }
     header .hero-content h1 {
       font-size: 6em;
       font-weight: 100;
       color: white;
       text-shadow: 1px 1px 3px gray; }
-  header #herovideo {
-    width: 100%; }
+  header .video-container {
+    overflow: hidden; }
+    header .video-container #herovideo {
+      transform: translateX(-40%);
+      display: block;
+      min-height: 568px;
+      overflow-x: hidden;
+      min-width: 100%; }
+      @media screen and (min-width: 768px) {
+        header .video-container #herovideo {
+          transform: translateX(-20%); } }
+      @media screen and (min-width: 1024px) {
+        header .video-container #herovideo {
+          transform: translateX(0%); } }
 
 #about {
   padding: 50px 2%;

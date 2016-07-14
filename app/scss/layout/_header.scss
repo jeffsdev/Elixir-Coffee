@@ -2,12 +2,12 @@ header {
   position: relative;
   // min-height: calc(75vh - 75px);
   // max-height: calc(90vh - 75px);
-  min-height: 100vh;
-  max-height: 100vh;
+  // min-height: 100vh;
+  // max-height: 100vh;
+  max-width: 100vw;
   background-image: url("../img/coffee-bw.jpg");
   background-size: cover;
   background-position: center;
-
 
   .hero-content {
     position: absolute;
@@ -17,6 +17,7 @@ header {
     text-align: center;
     width: 100%;
     height: 100%;
+    z-index: 9999;
     h1 {
       font-size: 6em;
       font-weight: 100;
@@ -24,7 +25,20 @@ header {
       text-shadow: 1px 1px 3px gray;
     }
   }
-  #herovideo {
-    width: 100%;
+  .video-container {
+    overflow: hidden;
+    #herovideo {
+      transform: translateX(-40%);
+      display: block;
+      min-height: 568px;
+      overflow-x: hidden;
+      min-width: 100%;
+      @media screen and #{$tablet} {
+        transform: translateX(-20%);
+      }
+      @media screen and #{$desktop} {
+        transform: translateX(0%);
+      }
+    }
   }
 }
