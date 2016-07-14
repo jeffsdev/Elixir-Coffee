@@ -21,8 +21,11 @@ header {
     h1 {
       font-size: 6em;
       font-weight: 100;
-      color: white;
+      color: $light-tan;
       text-shadow: 1px 1px 3px gray;
+      @media screen and #{$x-large} {
+        font-size: 8em;
+      }
     }
   }
   .video-container {

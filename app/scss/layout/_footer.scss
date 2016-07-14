@@ -15,7 +15,8 @@
       }
       h2 {
         padding-top: 14px;
-        color: white;
+        color: $light-tan;
+        font-weight: 100;
       }
     }
   }
@@ -25,10 +26,10 @@
     display: flex;
     flex-wrap: wrap;
     h3 {
-      color: white;
+      color: $light-tan;
     }
     p, span {
-      color: white;
+      color: $light-tan;
     }
     .footer-column {
       // border: 1px solid orange;
@@ -48,13 +49,16 @@
     }
     #contact-form {
       input, textarea {
+        font-size: 1em;
+        color: $light-tan;
+        font-family: $slabstack;
         display: block;
-        margin: 1rem auto;
+        margin: 0 auto 1rem auto;
         padding: 10px 0;
         width: 75%;
         background: none;
         border: none;
-        border-bottom: 1px solid #999;
+        border-bottom: 1px solid darken($light-tan, 50%);
       }
       button {
         display: block;
