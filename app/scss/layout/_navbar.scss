@@ -87,7 +87,7 @@ hr {
     width: 80%;
     height: 2px;
     margin: auto;
-    background: $light-tan;
+    background: $coffee-light;
   }
   @media screen and #{$tablet} {
     height: 75px;
@@ -108,8 +108,8 @@ hr {
   height: 100%;
   transform: translate(0px, 0px);
   transition: .60s ease;
-  background: $coffee-dark;
-  color: $light-tan;
+  background: $coffee-black;
+
   z-index: 99999999;
   @media screen and #{$tablet} {
     top: 75px;
@@ -124,12 +124,12 @@ hr {
 }
 
 .mobile-menu {
+  overflow: scroll;
   ul {
     display: none;
     list-style: none;
     padding: 0;
-    margin: 0;
-    // margin-top: 50px;
+    background: lighten($coffee-black, 10%);
   }
 
   ul.active {
@@ -147,17 +147,23 @@ hr {
     border-bottom: 1px solid $coffee-black;
   }
 
-  li:hover {
-    background: $coffee-light;
+  li:hover, li:active, li:focus {
+    background: $coffee-dark;
     transition: 0.3s;
   }
 
   li a {
     display: block;
-    padding: 25px 5%;
+    padding: 14px 5%;
     text-decoration: none;
-    color: #ccc;
+    color: $coffee-light;
     font-size: 1rem;
     font-family: sans-serif;
+    &:hover, &:active {
+      color: $light-tan;
+    }
+    @media screen and #{$tablet} {
+      padding: 25px 5%;
+    }
   }
 }
