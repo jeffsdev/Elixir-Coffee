@@ -5,9 +5,11 @@ header {
   // min-height: 100vh;
   // max-height: 100vh;
   max-width: 100vw;
+
   background-image: url("../img/coffee-bw.jpg");
   background-size: cover;
   background-position: center;
+  background-repeat: no-repeat;
 
   .hero-content {
     position: absolute;
@@ -20,9 +22,9 @@ header {
     z-index: 9999;
     h1 {
       font-size: 6em;
-      font-weight: 100;
       color: $light-tan;
-      text-shadow: 1px 1px 3px gray;
+      font-weight: 100;
+      text-shadow: 1px 1px 1px $coffee-black;
       @media screen and #{$x-large} {
         font-size: 8em;
       }
@@ -30,21 +32,25 @@ header {
     h2 {
       font-size: 3em;
       color: $coffee-black;
+      font-weight: 100;
+      text-shadow: 1px 1px 1px $coffee-black;
     }
     h3 {
       margin-top: 25px;
-      color: $coffee-dark;
+      color: $coffee-light;
       font-weight: 100;
       text-shadow: 1px 1px 1px $coffee-black;
     }
   }
   .video-container {
     overflow: hidden;
-    max-height: 768px;
+    height: 100vh;
     #herovideo {
       transform: translateX(-40%);
       display: block;
       min-height: 568px;
+      height: 100vh;
+      max-height: 100vh;
       overflow-x: hidden;
       min-width: 100%;
       @media screen and #{$tablet} {
@@ -53,6 +59,16 @@ header {
       @media screen and #{$desktop} {
         transform: translateX(0%);
       }
+      @media screen and (max-height: 640px) and (orientation: landscape) {
+        min-height: 200px;
+        transform: translateX(0%);
+      }
+      @media screen and #{$tablet} {
+        height: 100vh;
+      }
+    }
+    @media screen and #{$tablet} {
+      max-height: 568px;
     }
   }
 }

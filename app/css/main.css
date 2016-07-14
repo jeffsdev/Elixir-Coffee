@@ -233,7 +233,8 @@ header {
   max-width: 100vw;
   background-image: url("../img/coffee-bw.jpg");
   background-size: cover;
-  background-position: center; }
+  background-position: center;
+  background-repeat: no-repeat; }
   header .hero-content {
     position: absolute;
     display: flex;
@@ -245,27 +246,31 @@ header {
     z-index: 9999; }
     header .hero-content h1 {
       font-size: 6em;
-      font-weight: 100;
       color: #e7e6e2;
-      text-shadow: 1px 1px 3px gray; }
+      font-weight: 100;
+      text-shadow: 1px 1px 1px #191919; }
       @media screen and (min-width: 1280px) {
         header .hero-content h1 {
           font-size: 8em; } }
     header .hero-content h2 {
       font-size: 3em;
-      color: #191919; }
+      color: #191919;
+      font-weight: 100;
+      text-shadow: 1px 1px 1px #191919; }
     header .hero-content h3 {
       margin-top: 25px;
-      color: #61493d;
+      color: #967762;
       font-weight: 100;
       text-shadow: 1px 1px 1px #191919; }
   header .video-container {
     overflow: hidden;
-    max-height: 768px; }
+    height: 100vh; }
     header .video-container #herovideo {
       transform: translateX(-40%);
       display: block;
       min-height: 568px;
+      height: 100vh;
+      max-height: 100vh;
       overflow-x: hidden;
       min-width: 100%; }
       @media screen and (min-width: 768px) {
@@ -274,6 +279,16 @@ header {
       @media screen and (min-width: 1024px) {
         header .video-container #herovideo {
           transform: translateX(0%); } }
+      @media screen and (max-height: 640px) and (orientation: landscape) {
+        header .video-container #herovideo {
+          min-height: 200px;
+          transform: translateX(0%); } }
+      @media screen and (min-width: 768px) {
+        header .video-container #herovideo {
+          height: 100vh; } }
+    @media screen and (min-width: 768px) {
+      header .video-container {
+        max-height: 568px; } }
 
 #about {
   padding: 50px 2%;
