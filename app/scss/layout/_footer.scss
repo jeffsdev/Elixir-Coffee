@@ -1,8 +1,8 @@
 #contact {
-  background: $dark-gray;
-  padding: 0 2%;
+  background: $coffee-black;
+  padding: 0 2% 25px 2%;
   .contact-header {
-    padding: 25px 2%;
+    padding: 25px 2% 50px 2%;
 
     .footer-logo {
       // border: 1px solid red;
@@ -24,18 +24,26 @@
   .contact-main {
     display: flex;
     flex-wrap: wrap;
-    p, span, a, button {
+    h3 {
+      color: white;
+    }
+    p, span {
       color: white;
     }
     .footer-column {
-      border: 1px solid orange;
+      // border: 1px solid orange;
       flex: 1 2;
       text-align: center;
+      min-width: 40%;
       div:nth-child(2) {
         margin: 25px;
       }
       h4 {
         margin: 1rem 0;
+        color: $coffee-light;
+      }
+      @media screen and #{$tablet} {
+        min-width: 25%;
       }
     }
     #contact-form {
@@ -50,14 +58,31 @@
       }
       button {
         display: block;
-        border: 1px solid $coffee-brown;
+        color: $coffee-light;
+        border: 1px solid $coffee-light;
         padding: 10px;
         text-align: right;
         margin: auto;
       }
     }
-
+    .footer-social {
+      img {
+        height: 25px;
+        margin: 1.125em;
+        @media screen and #{$tablet} {
+          margin: 0.9em;
+        }
+      }
+    }
   }
+}
 
-
+#footer-bottom {
+  padding: 10px 2%;
+  background: #111;
+  color: #999;
+  text-align: center;
+  a:first-of-type {
+    display: inline-block;
+  }
 }

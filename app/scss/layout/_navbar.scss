@@ -1,18 +1,20 @@
 nav {
+  position: fixed;
+  width: 100%;
+  z-index: 9999999;
   padding: 0 2%;
   display: flex;
   justify-content: space-between;
-  background: #999;
+  background: $coffee-black;
   height: 50px;
   .brand {
     display: flex;
     align-items: center;
     height: 100%;
-    border: 1px solid red;
     a {
       display: flex;
       align-items: center;
-      border: 1px solid blue;
+      color: white;
       img {
         max-height: 35px;
         margin-right: 10px;
@@ -32,10 +34,9 @@ nav {
   }
   .nav-menu {
     display: none;
-    border: 1px solid blue;
     a {
+      color: white;
       line-height: 75px;
-      border: 1px solid red;
       display: block;
       height: 100%;
       padding: 0 25px;

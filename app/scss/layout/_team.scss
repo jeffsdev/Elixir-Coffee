@@ -3,6 +3,7 @@
   text-align: center;
   h2 {
     padding: 25px 2%;
+    color: $alt-blue;
   }
   .team-members {
     display: flex;
@@ -62,10 +63,13 @@
     background: $alt-blue;
     padding: 25px 2%;
     p {
-      font-size: 1.5em;
+      font-size: 1.25em;
       color: white;
       max-width: 1024px;
       margin: auto;
+      @media screen and #{$desktop} {
+        font-size: 1.5em;
+      }
     }
   }
 }

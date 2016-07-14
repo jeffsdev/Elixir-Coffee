@@ -1,6 +1,9 @@
 #blogposts {
   padding: 50px 2%;
   background: $light-tan;
+  h2 {
+    color: $coffee-dark;
+  }
 
   .latest-posts {
     .blogpost {
@@ -29,6 +32,7 @@
         }
         span {
           font-style: italic;
+          color: $coffee-light;
         }
         .readmore {
           display: block;

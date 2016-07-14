@@ -1,7 +1,9 @@
 header {
   position: relative;
-  min-height: calc(75vh - 75px);
-  max-height: calc(90vh - 75px);
+  // min-height: calc(75vh - 75px);
+  // max-height: calc(90vh - 75px);
+  min-height: 100vh;
+  max-height: 100vh;
   background-image: url("../img/coffee-bw.jpg");
   background-size: cover;
   background-position: center;
@@ -9,7 +11,6 @@ header {
 
   .hero-content {
     position: absolute;
-    border: 1px solid red;
     display: flex;
     flex-direction: column;
     justify-content: center;

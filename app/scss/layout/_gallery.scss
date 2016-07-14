@@ -1,11 +1,16 @@
 #gallery {
   .gallery-header {
-    padding: 25px 2%;
+    padding: 50px 2%;
     background: $dark-gray;
     background-image: url("../img/beans-bw.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
+    text-align: center;
     color: white;
+  }
+  .gallery-slider {
+    max-height: 500px;
+    overflow: hidden;
   }
 }

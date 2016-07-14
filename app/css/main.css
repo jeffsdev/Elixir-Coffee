@@ -61,7 +61,11 @@ button {
   transition: .3s; }
 
 a {
+  color: #967762;
   text-decoration: none; }
+  @media screen and (min-width: 1280px) {
+    a {
+      font-size: 1.125em; } }
 
 p {
   line-height: 1.25em;
@@ -69,6 +73,10 @@ p {
   @media screen and (min-width: 1280px) {
     p {
       font-size: 1.125em; } }
+
+@media screen and (min-width: 1280px) {
+  span {
+    font-size: 1.125em; } }
 
 button {
   overflow: visible;
@@ -93,20 +101,22 @@ img {
   margin: auto; }
 
 nav {
+  position: fixed;
+  width: 100%;
+  z-index: 9999999;
   padding: 0 2%;
   display: flex;
   justify-content: space-between;
-  background: #999;
+  background: #191919;
   height: 50px; }
   nav .brand {
     display: flex;
     align-items: center;
-    height: 100%;
-    border: 1px solid red; }
+    height: 100%; }
     nav .brand a {
       display: flex;
       align-items: center;
-      border: 1px solid blue; }
+      color: white; }
       nav .brand a img {
         max-height: 35px;
         margin-right: 10px; }
@@ -121,11 +131,10 @@ nav {
           nav .brand a span {
             font-size: 1.75em; } }
   nav .nav-menu {
-    display: none;
-    border: 1px solid blue; }
+    display: none; }
     nav .nav-menu a {
+      color: white;
       line-height: 75px;
-      border: 1px solid red;
       display: block;
       height: 100%;
       padding: 0 25px;
@@ -216,14 +225,13 @@ nav {
 
 header {
   position: relative;
-  min-height: calc(75vh - 75px);
-  max-height: calc(90vh - 75px);
+  min-height: 100vh;
+  max-height: 100vh;
   background-image: url("../img/coffee-bw.jpg");
   background-size: cover;
   background-position: center; }
   header .hero-content {
     position: absolute;
-    border: 1px solid red;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -270,13 +278,15 @@ header {
         padding-left: 5%; } }
     #about .about-us h2 {
       text-align: center;
-      margin-bottom: 1rem; }
+      margin-bottom: 1rem;
+      color: #61493d; }
       @media screen and (min-width: 768px) {
         #about .about-us h2 {
           text-align: left; } }
     #about .about-us h3 {
       margin: 1em 0;
-      text-align: right; }
+      text-align: right;
+      color: #2a343e; }
       @media screen and (min-width: 1280px) {
         #about .about-us h3 {
           padding-top: 50px;
@@ -314,7 +324,8 @@ header {
     margin: auto; }
     #locations .locations-addresses h3 {
       margin: 1rem 0;
-      text-align: center; }
+      text-align: center;
+      color: #967762; }
     #locations .locations-addresses img {
       max-width: 20px;
       max-height: 20px;
@@ -384,7 +395,8 @@ header {
   background: #e7e6e2;
   text-align: center; }
   #ourteam h2 {
-    padding: 25px 2%; }
+    padding: 25px 2%;
+    color: #2a343e; }
   #ourteam .team-members {
     display: flex;
     flex-wrap: wrap; }
@@ -430,14 +442,19 @@ header {
     background: #2a343e;
     padding: 25px 2%; }
     #ourteam .team-message p {
-      font-size: 1.5em;
+      font-size: 1.25em;
       color: white;
       max-width: 1024px;
       margin: auto; }
+      @media screen and (min-width: 1024px) {
+        #ourteam .team-message p {
+          font-size: 1.5em; } }
 
 #blogposts {
   padding: 50px 2%;
   background: #e7e6e2; }
+  #blogposts h2 {
+    color: #61493d; }
   #blogposts .latest-posts .blogpost {
     width: 75%;
     margin: 25px auto; }
@@ -458,7 +475,8 @@ header {
         display: block;
         margin-bottom: 0.5rem; }
       #blogposts .latest-posts .blogpost .post-meta span {
-        font-style: italic; }
+        font-style: italic;
+        color: #967762; }
       #blogposts .latest-posts .blogpost .post-meta .readmore {
         display: block;
         background: #4e3b2d;
@@ -492,19 +510,24 @@ header {
     text-align: right; }
 
 #gallery .gallery-header {
-  padding: 25px 2%;
+  padding: 50px 2%;
   background: #333436;
   background-image: url("../img/beans-bw.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
+  text-align: center;
   color: white; }
 
+#gallery .gallery-slider {
+  max-height: 500px;
+  overflow: hidden; }
+
 #contact {
-  background: #333436;
-  padding: 0 2%; }
+  background: #191919;
+  padding: 0 2% 25px 2%; }
   #contact .contact-header {
-    padding: 25px 2%; }
+    padding: 25px 2% 50px 2%; }
     #contact .contact-header .footer-logo {
       display: flex;
       margin: auto;
@@ -518,16 +541,22 @@ header {
   #contact .contact-main {
     display: flex;
     flex-wrap: wrap; }
-    #contact .contact-main p, #contact .contact-main span, #contact .contact-main a, #contact .contact-main button {
+    #contact .contact-main h3 {
+      color: white; }
+    #contact .contact-main p, #contact .contact-main span {
       color: white; }
     #contact .contact-main .footer-column {
-      border: 1px solid orange;
       flex: 1 2;
-      text-align: center; }
+      text-align: center;
+      min-width: 40%; }
       #contact .contact-main .footer-column div:nth-child(2) {
         margin: 25px; }
       #contact .contact-main .footer-column h4 {
-        margin: 1rem 0; }
+        margin: 1rem 0;
+        color: #967762; }
+      @media screen and (min-width: 768px) {
+        #contact .contact-main .footer-column {
+          min-width: 25%; } }
     #contact .contact-main #contact-form input, #contact .contact-main #contact-form textarea {
       display: block;
       margin: 1rem auto;
@@ -538,7 +567,22 @@ header {
       border-bottom: 1px solid #999; }
     #contact .contact-main #contact-form button {
       display: block;
-      border: 1px solid #4e3b2d;
+      color: #967762;
+      border: 1px solid #967762;
       padding: 10px;
       text-align: right;
       margin: auto; }
+    #contact .contact-main .footer-social img {
+      height: 25px;
+      margin: 1.125em; }
+      @media screen and (min-width: 768px) {
+        #contact .contact-main .footer-social img {
+          margin: 0.9em; } }
+
+#footer-bottom {
+  padding: 10px 2%;
+  background: #111;
+  color: #999;
+  text-align: center; }
+  #footer-bottom a:first-of-type {
+    display: inline-block; }
