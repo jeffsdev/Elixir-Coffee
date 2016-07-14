@@ -66,6 +66,9 @@ a {
 p {
   line-height: 1.25em;
   padding: 0.5rem 0; }
+  @media screen and (min-width: 1280px) {
+    p {
+      font-size: 1.125em; } }
 
 button {
   overflow: visible;
@@ -236,42 +239,78 @@ header {
     width: 100%; }
 
 #about {
-  padding: 25px 2%;
+  padding: 50px 2%;
   background: #e7e6e2; }
   #about .about-content {
     display: flex;
     flex-wrap: wrap; }
   #about .about-img {
+    display: flex;
     order: 2;
-    width: 100%; }
+    width: 100%;
+    align-items: center; }
+    @media screen and (min-width: 768px) {
+      #about .about-img {
+        order: 1;
+        width: 50%;
+        padding-right: 2.5%; } }
+    @media screen and (min-width: 1280px) {
+      #about .about-img {
+        padding-right: 5%; } }
   #about .about-us {
     order: 1;
-    width: 100%;
-    border: 1px solid red; }
+    width: 100%; }
+    @media screen and (min-width: 768px) {
+      #about .about-us {
+        order: 2;
+        width: 50%;
+        padding-left: 2.5%; } }
+    @media screen and (min-width: 1280px) {
+      #about .about-us {
+        padding-left: 5%; } }
     #about .about-us h2 {
       text-align: center;
       margin-bottom: 1rem; }
+      @media screen and (min-width: 768px) {
+        #about .about-us h2 {
+          text-align: left; } }
     #about .about-us h3 {
       margin: 1em 0;
       text-align: right; }
+      @media screen and (min-width: 1280px) {
+        #about .about-us h3 {
+          padding-top: 50px;
+          text-align: center;
+          font-size: 2em; } }
 
 #locations {
-  padding: 25px 2%;
+  padding: 50px 2%;
   background: #333436;
+  background-image: url("../img/stone-bw.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
   color: white; }
   #locations .locations-content {
     display: flex;
     flex-wrap: wrap; }
-  #locations .locations-img {
+  #locations .locations-summary .locations-img {
     display: flex;
-    justify-content: space-between; }
-    #locations .locations-img img {
+    justify-content: space-between;
+    margin: 25px 0; }
+    #locations .locations-summary .locations-img img {
       display: block;
       width: 45%;
       flex: 0 1 auto;
       height: 100%; }
+  @media screen and (min-width: 1024px) {
+    #locations .locations-summary {
+      width: 50%;
+      padding-right: 2.5%; } }
+  @media screen and (min-width: 1280px) {
+    #locations .locations-summary {
+      padding-right: 5%; } }
   #locations .locations-addresses {
-    border: 1px solid blue;
+    display: block;
     margin: auto; }
     #locations .locations-addresses h3 {
       margin: 1rem 0;
@@ -283,6 +322,37 @@ header {
       margin-right: 10px; }
     #locations .locations-addresses img:nth-of-type(2) {
       margin: 1rem 10px 1rem 0; }
+    @media screen and (min-width: 480px) {
+      #locations .locations-addresses .burnside {
+        margin-top: initial;
+        margin-left: 2%; } }
+    @media screen and (min-width: 640px) {
+      #locations .locations-addresses .burnside {
+        margin-left: 10%; } }
+    @media screen and (min-width: 1024px) {
+      #locations .locations-addresses .burnside {
+        margin-left: 10%; } }
+    #locations .locations-addresses .mississippi {
+      margin-top: 25px; }
+      @media screen and (min-width: 480px) {
+        #locations .locations-addresses .mississippi {
+          margin-top: initial;
+          margin-right: 2%; } }
+      @media screen and (min-width: 640px) {
+        #locations .locations-addresses .mississippi {
+          margin-right: 10%; } }
+    @media screen and (min-width: 480px) {
+      #locations .locations-addresses {
+        width: 100%;
+        display: flex;
+        justify-content: space-between; } }
+    @media screen and (min-width: 1024px) {
+      #locations .locations-addresses {
+        width: 50%;
+        padding-left: 2.5%; } }
+    @media screen and (min-width: 1280px) {
+      #locations .locations-addresses {
+        padding-left: 5%; } }
 
 #quotes {
   padding: 25px 2%;

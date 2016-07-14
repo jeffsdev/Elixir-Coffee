@@ -56,6 +56,9 @@ a {
 p {
   line-height: 1.25em;
   padding: 0.5rem 0;
+  @media screen and #{$x-large} {
+    font-size: 1.125em;
+  }
 }
 
 button {
