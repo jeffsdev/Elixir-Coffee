@@ -1,5 +1,5 @@
 #quotes {
-  padding: 25px 2%;
+  padding: 50px 2%;
   background: $coffee-brown;
   background-image: url("../img/grinder.jpg");
   background-repeat: no-repeat;
@@ -7,21 +7,25 @@
   background-attachment: fixed;
   .quotes-content {
     display: flex;
-    width: 100%;
+    width: 90%;
+    max-width: 900px;
     color: white;
+    text-align: center;
+    text-shadow: 2px 2px 2px black;
     span:not(.quotesource) {
-      border: 1px solid orange;
       font-size: 5em;
+      font-style: italic;
+      margin-left: -10px;
+      padding-right: 10px;
     }
     .quotesource {
       display: block;
-      border: 1px solid red;
-      text-align: center;
       font-size: 1.5em;
       margin-top: 1em;
     }
     p {
-      margin: 0 25px;
+      // margin: 0 25px;
+      font-size: 1.25em;
     }
   }
 }

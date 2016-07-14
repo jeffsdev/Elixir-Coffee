@@ -355,7 +355,7 @@ header {
         padding-left: 5%; } }
 
 #quotes {
-  padding: 25px 2%;
+  padding: 50px 2%;
   background: #4e3b2d;
   background-image: url("../img/grinder.jpg");
   background-repeat: no-repeat;
@@ -363,19 +363,22 @@ header {
   background-attachment: fixed; }
   #quotes .quotes-content {
     display: flex;
-    width: 100%;
-    color: white; }
+    width: 90%;
+    max-width: 900px;
+    color: white;
+    text-align: center;
+    text-shadow: 2px 2px 2px black; }
     #quotes .quotes-content span:not(.quotesource) {
-      border: 1px solid orange;
-      font-size: 5em; }
+      font-size: 5em;
+      font-style: italic;
+      margin-left: -10px;
+      padding-right: 10px; }
     #quotes .quotes-content .quotesource {
       display: block;
-      border: 1px solid red;
-      text-align: center;
       font-size: 1.5em;
       margin-top: 1em; }
     #quotes .quotes-content p {
-      margin: 0 25px; }
+      font-size: 1.25em; }
 
 #ourteam {
   background: #e7e6e2;
@@ -433,22 +436,60 @@ header {
       margin: auto; }
 
 #blogposts {
-  padding: 25px 2%; }
-  #blogposts .blogpost {
+  padding: 50px 2%;
+  background: #e7e6e2; }
+  #blogposts .latest-posts .blogpost {
     width: 75%;
     margin: 25px auto; }
-    #blogposts .blogpost img, #blogposts .blogpost span {
-      margin-bottom: 0.5rem; }
-    #blogposts .blogpost span {
-      display: block; }
-    #blogposts .blogpost .readmore {
-      display: block;
-      background: #4e3b2d;
-      color: white;
-      width: 150px;
-      padding: 10px 0;
-      margin: 1rem auto;
-      text-align: center; }
+    #blogposts .latest-posts .blogpost img {
+      margin-bottom: 1rem; }
+      @media screen and (min-width: 480px) {
+        #blogposts .latest-posts .blogpost img {
+          width: 33.33%;
+          height: 100%;
+          margin: 0; } }
+      @media screen and (min-width: 1024px) {
+        #blogposts .latest-posts .blogpost img {
+          width: 100%;
+          margin-bottom: 1rem; } }
+    #blogposts .latest-posts .blogpost .post-meta {
+      display: inline-block; }
+      #blogposts .latest-posts .blogpost .post-meta h3 {
+        display: block;
+        margin-bottom: 0.5rem; }
+      #blogposts .latest-posts .blogpost .post-meta span {
+        font-style: italic; }
+      #blogposts .latest-posts .blogpost .post-meta .readmore {
+        display: block;
+        background: #4e3b2d;
+        color: white;
+        width: 150px;
+        padding: 10px 0;
+        margin: 1rem auto;
+        text-align: center; }
+      @media screen and (min-width: 480px) {
+        #blogposts .latest-posts .blogpost .post-meta {
+          margin-left: 25px; } }
+      @media screen and (min-width: 1024px) {
+        #blogposts .latest-posts .blogpost .post-meta {
+          display: block;
+          margin-left: 0; } }
+    @media screen and (min-width: 480px) {
+      #blogposts .latest-posts .blogpost {
+        display: flex;
+        width: 100%;
+        margin: 25px 0; } }
+    @media screen and (min-width: 1024px) {
+      #blogposts .latest-posts .blogpost {
+        display: block;
+        width: 25%; } }
+  @media screen and (min-width: 1024px) {
+    #blogposts .latest-posts {
+      display: flex;
+      justify-content: space-around; } }
+  #blogposts a.moreposts {
+    display: block;
+    text-align: right; }
 
 #gallery .gallery-header {
   padding: 25px 2%;
