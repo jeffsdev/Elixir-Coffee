@@ -82,6 +82,9 @@
         &:focus {
           outline: none;
         }
+        &:active {
+          background: darken($coffee-dark, 15%);
+        }
       }
     }
     .footer-social {

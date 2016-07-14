@@ -80,7 +80,8 @@ strong {
 a,
 button {
   color: inherit;
-  transition: .3s; }
+  transition: .3s;
+  -webkit-tap-highlight-color: transparent; }
 
 a {
   color: #967762;
@@ -190,12 +191,12 @@ hr {
   justify-content: space-around;
   width: 50px;
   height: 50px;
-  padding: 10px 0;
+  padding: 3% 10px;
   cursor: pointer; }
   .nav-burger span {
     display: block;
     width: 80%;
-    height: 5%;
+    height: 2px;
     margin: auto;
     background: #e7e6e2; }
   @media screen and (min-width: 768px) {
@@ -306,9 +307,6 @@ header {
       @media screen and (min-width: 768px) {
         header .video-container #herovideo {
           transform: translateX(-20%); } }
-      @media screen and (min-width: 1024px) {
-        header .video-container #herovideo {
-          transform: translateX(0%); } }
       @media screen and (max-height: 640px) and (orientation: landscape) {
         header .video-container #herovideo {
           min-height: 200px;
@@ -662,6 +660,8 @@ header {
         color: #e7e6e2; }
       #contact .contact-main #contact-form button:focus {
         outline: none; }
+      #contact .contact-main #contact-form button:active {
+        background: #32261f; }
     #contact .contact-main .footer-social img {
       height: 25px;
       margin: 1.125em; }

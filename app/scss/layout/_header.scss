@@ -56,9 +56,6 @@ header {
       @media screen and #{$tablet} {
         transform: translateX(-20%);
       }
-      @media screen and #{$desktop} {
-        transform: translateX(0%);
-      }
       @media screen and (max-height: 640px) and (orientation: landscape) {
         min-height: 200px;
         transform: translateX(0%);
