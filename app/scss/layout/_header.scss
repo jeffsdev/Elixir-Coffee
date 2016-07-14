@@ -27,9 +27,20 @@ header {
         font-size: 8em;
       }
     }
+    h2 {
+      font-size: 3em;
+      color: $coffee-black;
+    }
+    h3 {
+      margin-top: 25px;
+      color: $coffee-dark;
+      font-weight: 100;
+      text-shadow: 1px 1px 1px $coffee-black;
+    }
   }
   .video-container {
     overflow: hidden;
+    max-height: 768px;
     #herovideo {
       transform: translateX(-40%);
       display: block;

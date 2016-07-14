@@ -251,8 +251,17 @@ header {
       @media screen and (min-width: 1280px) {
         header .hero-content h1 {
           font-size: 8em; } }
+    header .hero-content h2 {
+      font-size: 3em;
+      color: #191919; }
+    header .hero-content h3 {
+      margin-top: 25px;
+      color: #61493d;
+      font-weight: 100;
+      text-shadow: 1px 1px 1px #191919; }
   header .video-container {
-    overflow: hidden; }
+    overflow: hidden;
+    max-height: 768px; }
     header .video-container #herovideo {
       transform: translateX(-40%);
       display: block;
