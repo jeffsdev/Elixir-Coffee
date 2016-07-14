@@ -10,10 +10,8 @@ $(document).ready(function() {
   // toggle mobile nav menu
 
   $(".nav-burger").click(function() {
-    console.log("hi");
     $('ul').toggleClass("active");
     $(".mobile-menu").toggleClass("active");
-    // $("header").toggleClass("active");
   });
 
 
@@ -31,8 +29,14 @@ $(document).ready(function() {
       return $(window).scrollTop();
     }
 
+    // make sure navbar does not hide if mobile menu is active
+    if ($(".mobile-menu").hasClass("active")) {
+      $(window).on('scroll', function(){
+          nav.removeClass("hidden");
+          return false;
+      });
     // show navbar if scroll position on page is less than the window height
-    if(height < wh) {
+    }else if(height < wh) {
       $(window).on('scroll', function(){
         nav.removeClass('hidden', getHeight() > prev);
       });
@@ -45,7 +49,28 @@ $(document).ready(function() {
 
   });
 
+
   /************************************************************/
-  /************************************************************/
+  // Scroll to desired location on page when nav button is clicked
+
+  $(".main-navbar").find('a').on('click', function () {
+
+    var $el = $(this);
+    var id = $el.attr('href');
+    var nav_height = $("nav").outerHeight();
+
+    // hide mobile menu after clicking a link
+    $('ul').toggleClass("active");
+    $(".mobile-menu").toggleClass("active");
+
+    // scroll to location
+    $('html, body').animate({
+      scrollTop: $(id).offset().top - nav_height +1
+    }, 500);
+
+    return false;
+  });
+
+
 
 });
