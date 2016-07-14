@@ -19,7 +19,7 @@ nav {
       img {
         max-height: 35px;
         margin-right: 10px;
-        @media screen and #{$tablet} {
+        @media screen and #{$tablet} and (min-height: 640px){
           max-height: 50px;
         }
       }
@@ -28,7 +28,7 @@ nav {
         font-weight: normal;
         padding-top: 3px;
         width: 50%;
-        @media screen and #{$tablet} {
+        @media screen and #{$tablet} and (min-height: 640px) {
           font-size: 1.75em;
         }
       }
@@ -38,20 +38,27 @@ nav {
     display: none;
     a {
       color: $light-tan;
-      line-height: 75px;
+      line-height: 50px;
       display: block;
       height: 100%;
       padding: 0 25px;
       font-size: 1em;
-      @media screen and #{$desktop} {
+      &:hover {
+        background: darken($coffee-dark, 10%);
+      }
+      &:active {
+        background: $coffee-light;
+      }
+      @media screen and #{$desktop}  and (min-height: 640px){
         font-size: 1.25em;
+        line-height: 75px;
       }
     }
     @media screen and #{$desktop} {
       display: flex;
     }
   }
-  @media screen and #{$tablet} {
+  @media screen and #{$tablet} and (min-height: 640px) {
     height: 75px;
   }
 }
@@ -61,7 +68,9 @@ nav.hidden {
   transform: translateY(-100%);
 }
 
-
+hr {
+  display: block;
+}
 
 
 

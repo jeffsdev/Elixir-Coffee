@@ -1,3 +1,25 @@
+.link-hover-underline a, #blogposts a, #contact .contact-main .footer-column a, #footer-bottom a {
+  position: relative; }
+
+.link-hover-underline a:before, #blogposts a:before, #contact .contact-main .footer-column a:before, #footer-bottom a:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  bottom: 0;
+  left: 0;
+  background-color: #967762;
+  visibility: hidden;
+  transform: scaleX(0);
+  transition: all 0.3s ease-in-out 0s; }
+
+.link-hover-underline a:hover:before, #blogposts a:hover:before, #contact .contact-main .footer-column a:hover:before, #footer-bottom a:hover:before {
+  visibility: visible;
+  transform: scaleX(1); }
+
+.link-hover-underline a:active, #blogposts a:active, #contact .contact-main .footer-column a:active, #footer-bottom a:active {
+  color: #53677b; }
+
 html {
   box-sizing: border-box;
   -ms-text-size-adjust: 100%;
@@ -121,7 +143,7 @@ nav {
       nav .brand a img {
         max-height: 35px;
         margin-right: 10px; }
-        @media screen and (min-width: 768px) {
+        @media screen and (min-width: 768px) and (min-height: 640px) {
           nav .brand a img {
             max-height: 50px; } }
       nav .brand a h1 {
@@ -129,30 +151,38 @@ nav {
         font-weight: normal;
         padding-top: 3px;
         width: 50%; }
-        @media screen and (min-width: 768px) {
+        @media screen and (min-width: 768px) and (min-height: 640px) {
           nav .brand a h1 {
             font-size: 1.75em; } }
   nav .nav-menu {
     display: none; }
     nav .nav-menu a {
       color: #e7e6e2;
-      line-height: 75px;
+      line-height: 50px;
       display: block;
       height: 100%;
       padding: 0 25px;
       font-size: 1em; }
-      @media screen and (min-width: 1024px) {
+      nav .nav-menu a:hover {
+        background: #423129; }
+      nav .nav-menu a:active {
+        background: #967762; }
+      @media screen and (min-width: 1024px) and (min-height: 640px) {
         nav .nav-menu a {
-          font-size: 1.25em; } }
+          font-size: 1.25em;
+          line-height: 75px; } }
     @media screen and (min-width: 1024px) {
       nav .nav-menu {
         display: flex; } }
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 768px) and (min-height: 640px) {
     nav {
       height: 75px; } }
 
 nav.hidden {
   transform: translateY(-100%); }
+
+hr {
+  display: block; }
 
 .nav-burger {
   display: flex;
@@ -499,6 +529,9 @@ header {
   background: #e7e6e2; }
   #blogposts h2 {
     color: #61493d; }
+  #blogposts a.moreposts {
+    display: inline;
+    float: right; }
   #blogposts .latest-posts .blogpost {
     width: 75%;
     margin: 25px auto; }
@@ -529,6 +562,10 @@ header {
         padding: 10px 0;
         margin: 1rem auto;
         text-align: center; }
+        #blogposts .latest-posts .blogpost .post-meta .readmore:hover {
+          background: #967762; }
+        #blogposts .latest-posts .blogpost .post-meta .readmore:active {
+          background: #c0ac9e; }
       @media screen and (min-width: 480px) {
         #blogposts .latest-posts .blogpost .post-meta {
           margin-left: 25px; } }
@@ -549,9 +586,6 @@ header {
     #blogposts .latest-posts {
       display: flex;
       justify-content: space-around; } }
-  #blogposts a.moreposts {
-    display: block;
-    text-align: right; }
 
 #gallery .gallery-header {
   padding: 50px 2%;
@@ -613,6 +647,9 @@ header {
       background: none;
       border: none;
       border-bottom: 1px solid #6f6b5b; }
+      #contact .contact-main #contact-form input:focus, #contact .contact-main #contact-form textarea:focus {
+        outline: none;
+        border-color: #967762; }
     #contact .contact-main #contact-form button {
       display: block;
       color: #967762;
@@ -620,6 +657,11 @@ header {
       padding: 10px;
       text-align: right;
       margin: auto; }
+      #contact .contact-main #contact-form button:hover {
+        background: #61493d;
+        color: #e7e6e2; }
+      #contact .contact-main #contact-form button:focus {
+        outline: none; }
     #contact .contact-main .footer-social img {
       height: 25px;
       margin: 1.125em; }

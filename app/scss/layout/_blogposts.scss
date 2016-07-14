@@ -1,10 +1,14 @@
 #blogposts {
   padding: 50px 2%;
   background: $light-tan;
+  @extend .link-hover-underline;
   h2 {
     color: $coffee-dark;
   }
-
+  a.moreposts {
+    display: inline;
+    float: right;
+  }
   .latest-posts {
     .blogpost {
       // border: 1px solid red;
@@ -42,6 +46,12 @@
           padding: 10px 0;
           margin: 1rem auto;
           text-align: center;
+          &:hover {
+            background: $coffee-light;
+          }
+          &:active {
+            background: lighten($coffee-light, 20%);
+          }
         }
         @media screen and #{$lg-mobile} {
           margin-left: 25px;
@@ -66,20 +76,6 @@
       display: flex;
       justify-content: space-around;
     }
-  }
-
-
-
-
-
-
-
-
-
-
-  a.moreposts {
-    display: block;
-    text-align: right;
   }
 
 
