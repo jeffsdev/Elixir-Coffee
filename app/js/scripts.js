@@ -72,5 +72,20 @@ $(document).ready(function() {
   });
 
 
+  /************************************************************/
+  // Team member hover effects
+
+  $(".team-member-picture").mouseenter(function() {
+    $(this).find(".team-member-name").animate({
+      opacity: 1
+    }, 600);
+  });
+  $(".team-member-picture").mouseleave(function() {
+    $(this).find(".team-member-name").animate({
+      opacity: 0
+    }, 600);
+  });
+
+
 
 });
