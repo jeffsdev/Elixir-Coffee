@@ -5,6 +5,10 @@ $(document).ready(function() {
     var h = $('.height-fix').height();
     $('.height-fix').height(h);
   }
+  if ( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+    var h = $('.height-fix2').height();
+    $('.height-fix2').height(h);
+  }
 
   /************************************************************/
   // toggle mobile nav menu
@@ -85,6 +89,26 @@ $(document).ready(function() {
       opacity: 0
     }, 600);
   });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

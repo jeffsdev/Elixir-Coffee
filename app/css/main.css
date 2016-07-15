@@ -610,7 +610,7 @@ header {
       justify-content: space-around; } }
 
 #gallery .gallery-header {
-  padding: 50px 2%;
+  padding: 25px 2%;
   background: #333436;
   background-image: url("../img/beans-bw.jpg");
   background-repeat: no-repeat;
@@ -618,10 +618,74 @@ header {
   background-attachment: fixed;
   text-align: center;
   color: #e7e6e2; }
+  @media screen and (min-width: 768px) {
+    #gallery .gallery-header {
+      padding: 50px 2%; } }
+  #gallery .gallery-header h3 {
+    font-size: 1.25em; }
+    @media screen and (min-width: 768px) {
+      #gallery .gallery-header h3 {
+        font-size: 1.5em; } }
 
 #gallery .gallery-slider {
+  background-color: #61493d;
   max-height: 500px;
+  min-height: 175px;
+  height: 30vh;
   overflow: hidden; }
+  #gallery .gallery-slider img {
+    display: block; }
+  @media screen and (min-width: 768px) {
+    #gallery .gallery-slider {
+      min-height: 350px; } }
+  @media screen and (min-width: 1280px) {
+    #gallery .gallery-slider {
+      height: 50vh;
+      max-height: 800px; } }
+
+#gallery .slider {
+  z-index: 1;
+  position: relative;
+  height: 100%; }
+  #gallery .slider div span {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: none;
+    opacity: 0;
+    z-index: 0;
+    animation: imageAnimation 30s linear infinite 0s; }
+  #gallery .slider div:nth-child(1) span {
+    background-image: url("../img/coffeeshop1.jpg"); }
+  #gallery .slider div:nth-child(2) span {
+    background-image: url("../img/coffeeshop2.jpg");
+    animation-delay: 7.5s; }
+  #gallery .slider div:nth-child(3) span {
+    background-image: url("../img/coffeeshop3.jpg");
+    animation-delay: 15s; }
+  #gallery .slider div:nth-child(4) span {
+    background-image: url("../img/pourover.jpg");
+    animation-delay: 22.5s; }
+
+@keyframes imageAnimation {
+  0% {
+    opacity: 0;
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in; }
+  15% {
+    opacity: 1;
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out; }
+  30% {
+    opacity: 1; }
+  40% {
+    opacity: 0; }
+  100% {
+    opacity: 0; } }
 
 #contact {
   background: #191919;
