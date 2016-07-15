@@ -82,27 +82,52 @@ hr {
 .nav-burger {
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: center;
   width: 50px;
   height: 50px;
-  padding: 10px 10px;
   cursor: pointer;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  position: relative;
+  padding-left: 5px;
+
   span {
     display: block;
-    width: 80%;
-    height: 2px;
-    margin: auto;
     background: $coffee-light;
+    height: 2px;
+    width: 40px;
+    position: absolute;
+    transition: all 0.5s ease;
   }
+
+  span:nth-child(1){top:10px;}
+  span:nth-child(2){top:22.5px;}
+  span:nth-child(3){top:35px;}
+
+  .transparent {opacity:0;}
+  .rotate-top{transform:rotatez(45deg);-webkit-transform-origin:0%;left:10px; transition:all 0.5s ease;}
+  .rotate-bottom{transform:rotatez(-45deg);-webkit-transform-origin: 0%;left:10px; margin-top: 3px; transition:all 0.5s ease;}
+
+
   @media screen and #{$tablet} {
     height: 75px;
-    width: 65px;
-    padding: 20px 10px;
+    width: 75px;
+    padding-left: 15px;
+
+    span:nth-child(1){top:20px;}
+    span:nth-child(2){top:35px;}
+    span:nth-child(3){top:50px;}
+
+    .transparent {opacity:0;}
+    .rotate-top{transform:rotatez(45deg);-webkit-transform-origin:0%;left:20px; transition:all 0.5s ease;}
+    .rotate-bottom{transform:rotatez(-45deg);-webkit-transform-origin: 0%;left:20px; margin-top: -1px; transition:all 0.5s ease;}
   }
+
   @media screen and #{$desktop} {
     display: none;
   }
 }
+
+
 
 
 .mobile-menu {
@@ -111,6 +136,7 @@ hr {
   bottom: 0;
   width: 60%;
   right: -768px;
+  min-height: 1000px;
   height: 100vh;
   transform: translate(0px, 0px);
   transition: .60s ease;
@@ -130,7 +156,7 @@ hr {
 }
 
 .mobile-menu {
-  overflow: scroll;
+  overflow: auto;
   ul {
     display: none;
     list-style: none;
@@ -172,4 +198,20 @@ hr {
       padding: 25px 5%;
     }
   }
+}
+
+// darken the rest of the page when mobile nav is open
+.navshroud {
+  display: none;
+  position: fixed;
+  width: 100%;
+  min-height: 1000px;
+  height: 100%;
+  background: #000;
+  opacity: 0.75;
+  z-index: 99999;
+}
+// prevent scrolling on body when mobile nav is open
+.stick {
+  position: fixed;
 }

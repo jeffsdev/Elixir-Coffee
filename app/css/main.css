@@ -193,22 +193,63 @@ hr {
 .nav-burger {
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: center;
   width: 50px;
   height: 50px;
-  padding: 10px 10px;
-  cursor: pointer; }
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  position: relative;
+  padding-left: 5px; }
   .nav-burger span {
     display: block;
-    width: 80%;
+    background: #967762;
     height: 2px;
-    margin: auto;
-    background: #967762; }
+    width: 40px;
+    position: absolute;
+    transition: all 0.5s ease; }
+  .nav-burger span:nth-child(1) {
+    top: 10px; }
+  .nav-burger span:nth-child(2) {
+    top: 22.5px; }
+  .nav-burger span:nth-child(3) {
+    top: 35px; }
+  .nav-burger .transparent {
+    opacity: 0; }
+  .nav-burger .rotate-top {
+    transform: rotatez(45deg);
+    -webkit-transform-origin: 0%;
+    left: 10px;
+    transition: all 0.5s ease; }
+  .nav-burger .rotate-bottom {
+    transform: rotatez(-45deg);
+    -webkit-transform-origin: 0%;
+    left: 10px;
+    margin-top: 3px;
+    transition: all 0.5s ease; }
   @media screen and (min-width: 768px) {
     .nav-burger {
       height: 75px;
-      width: 65px;
-      padding: 20px 10px; } }
+      width: 75px;
+      padding-left: 15px; }
+      .nav-burger span:nth-child(1) {
+        top: 20px; }
+      .nav-burger span:nth-child(2) {
+        top: 35px; }
+      .nav-burger span:nth-child(3) {
+        top: 50px; }
+      .nav-burger .transparent {
+        opacity: 0; }
+      .nav-burger .rotate-top {
+        transform: rotatez(45deg);
+        -webkit-transform-origin: 0%;
+        left: 20px;
+        transition: all 0.5s ease; }
+      .nav-burger .rotate-bottom {
+        transform: rotatez(-45deg);
+        -webkit-transform-origin: 0%;
+        left: 20px;
+        margin-top: -1px;
+        transition: all 0.5s ease; } }
   @media screen and (min-width: 1024px) {
     .nav-burger {
       display: none; } }
@@ -219,6 +260,7 @@ hr {
   bottom: 0;
   width: 60%;
   right: -768px;
+  min-height: 1000px;
   height: 100vh;
   transform: translate(0px, 0px);
   transition: .60s ease;
@@ -235,7 +277,7 @@ hr {
   transform: translate(-768px, 0px); }
 
 .mobile-menu {
-  overflow: scroll; }
+  overflow: auto; }
   .mobile-menu ul {
     display: none;
     list-style: none;
@@ -265,6 +307,19 @@ hr {
     @media screen and (min-width: 768px) {
       .mobile-menu li a {
         padding: 25px 5%; } }
+
+.navshroud {
+  display: none;
+  position: fixed;
+  width: 100%;
+  min-height: 1000px;
+  height: 100%;
+  background: #000;
+  opacity: 0.75;
+  z-index: 99999; }
+
+.stick {
+  position: fixed; }
 
 #load {
   background: #333;
