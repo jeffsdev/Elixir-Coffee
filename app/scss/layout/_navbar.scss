@@ -37,17 +37,17 @@ nav {
   .nav-menu {
     display: none;
     a {
-      color: $light-tan;
+      color: $coffee-light;
       line-height: 50px;
       display: block;
       height: 100%;
       padding: 0 25px;
       font-size: 1em;
       &:hover {
-        background: darken($coffee-dark, 10%);
+        background: lighten($coffee-black, 10%);
       }
       &:active {
-        background: $coffee-light;
+        background: lighten($coffee-black, 15%);
       }
       @media screen and #{$desktop}  and (min-height: 640px){
         font-size: 1.25em;
@@ -66,6 +66,9 @@ nav {
 
 nav.hidden {
   transform: translateY(-100%);
+}
+nav.not-hidden {
+  transform: translateY(0);
 }
 
 hr {
@@ -105,7 +108,7 @@ hr {
   bottom: 0;
   width: 60%;
   right: -768px;
-  height: 100%;
+  height: 100vh;
   transform: translate(0px, 0px);
   transition: .60s ease;
   background: $coffee-black;

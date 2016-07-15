@@ -1,3 +1,14 @@
+#load {
+  background: #333;
+  width: 100vw;
+  height: 100vh;
+  span {
+    font-size: 8em;
+    color: white;
+  }
+}
+
+
 header {
   position: relative;
   // min-height: calc(75vh - 75px);

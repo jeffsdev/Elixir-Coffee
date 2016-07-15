@@ -1,3 +1,11 @@
+// window.addEventListener("load", function(){
+// 	var load_screen = document.getElementById("load");
+//   setTimeout(function() {
+//   	document.body.removeChild(load_screen);
+//   }, 2000);
+// });
+
+
 $(document).ready(function() {
 
   // Fix for funky fixed background 100vh viewport size re-sizing jumpy bug on mobile browsers
@@ -22,36 +30,66 @@ $(document).ready(function() {
   /************************************************************/
   // toggle navbar visibility based on scroll position on page
 
-  $(window).scroll(function() {
 
-    var height = $(window).scrollTop();
-    var prev = $(window).scrollTop();
-    var nav = $('.main-navbar');
-    var wh = window.innerHeight;
+  // // make sure navbar does not hide if mobile menu is active
+  // if ($(".mobile-menu").hasClass("active")) {
+  //   $(window).on('scroll', function(){
+  //       nav.removeClass("hidden");
+  //       return false;
+  //   });
 
-    function getHeight() {
-      return $(window).scrollTop();
-    }
 
-    // make sure navbar does not hide if mobile menu is active
-    if ($(".mobile-menu").hasClass("active")) {
-      $(window).on('scroll', function(){
-          nav.removeClass("hidden");
-          return false;
-      });
-    // show navbar if scroll position on page is less than the window height
-    }else if(height < wh) {
-      $(window).on('scroll', function(){
-        nav.removeClass('hidden', getHeight() > prev);
-      });
-    // otherwise, hide the navbar, and only show it if the user scrolls up
-    } else {
-        $(window).on('scroll', function(){
-        nav.toggleClass('hidden', getHeight() > prev);
-      });
-    }
+  // Hide Header on on scroll down
+  var didScroll;
+  var lastScrollTop = 0;
+  var delta = 5;
+  var navbarHeight = $('.main-navbar').outerHeight();
 
+  $(window).scroll(function(event){
+      didScroll = true;
   });
+
+  setInterval(function() {
+      if (didScroll) {
+          hasScrolled();
+          didScroll = false;
+      }
+  }, 250);
+
+
+
+  function hasScrolled() {
+      var st = $(this).scrollTop();
+
+      // Make sure they scroll more than delta
+      if(Math.abs(lastScrollTop - st) <= delta)
+          return;
+
+      // If they scrolled down and are past the navbar, add class .nav-up.
+      // This is necessary so you never see what is "behind" the navbar.
+      // make sure navbar does not hide if mobile menu is active
+      if ($(".mobile-menu").hasClass("active")) {
+        $(window).on('scroll', function(){
+            $(".main-navbar").removeClass("hidden");
+            
+        });
+      } else if (st > lastScrollTop && st > navbarHeight){
+          // Scroll Down
+          $('.main-navbar').removeClass('not-hidden').addClass('hidden');
+      } else {
+          // Scroll Up
+          if(st + $(window).height() < $(document).height()) {
+              $('.main-navbar').removeClass('hidden').addClass('not-hidden');
+          }
+      }
+
+
+
+      lastScrollTop = st;
+  }
+
+
+
 
 
   /************************************************************/
