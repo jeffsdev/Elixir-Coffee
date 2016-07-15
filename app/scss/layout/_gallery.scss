@@ -37,7 +37,7 @@
   }
 
   //gallery slider
-  
+
   .slider {
     z-index: 1;
     position: relative;
@@ -50,25 +50,27 @@
       left: 0px;
       background-size: cover;
       background-position: center;
-      background-repeat: none;
+      background-repeat: no-repeat;
       opacity: 0;
       z-index: 0;
       animation: imageAnimation 30s linear infinite 0s;
     }
     div {
       &:nth-child(1) span {
-        background-image: url("../img/coffeeshop1.jpg");
+        background-image: url("../img/pourover.jpg");
+        background-position: 0 75%;
       }
       &:nth-child(2) span {
-        background-image: url("../img/coffeeshop2.jpg");
+        background-image: url("../img/coffee-art.jpg");
+        background-position: 0 75%;
         animation-delay: 7.5s;
       }
       &:nth-child(3) span {
-        background-image: url("../img/coffeeshop3.jpg");
+        background-image: url("../img/coffeeshop4.jpg");
         animation-delay: 15s;
       }
       &:nth-child(4) span {
-        background-image: url("../img/pourover.jpg");
+        background-image: url("../img/beans2.jpg");
         animation-delay: 22.5s;
       }
     }
