@@ -18,7 +18,6 @@ Make sure these are installed first.
 
 ### Quick Start
 Clone repository  
-Add appropriate values to the "name" and "description" (and anything else depending on project) fields in the package.json file.  
 ```npm install```  
 ```gulp build```  
 ```gulp default```  
