@@ -1,10 +1,14 @@
 # Elixir Coffee
-##### Jeff Seymour
+#### Jeff Seymour
 ##### July 2016
 
 ## Description
-##### This is a website for a coffee shop that I designed and coded.   
+##### This is a website that I designed and coded for a fake coffee shop, as a project to add to my portfolio.
 
+### View Website: [Elixir Coffee](http://www.elixir-coffee.jeffseymour.me)
+
+### Technologies Used
+HTML5, CSS3/SCSS, JavaScript, jQuery
 
 ### Dependencies
 Make sure these are installed first.
