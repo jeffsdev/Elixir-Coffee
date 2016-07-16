@@ -55,7 +55,7 @@ gulp.task('useref', function() {
 
 // Optimizing Images
 gulp.task('images', function() {
-  return gulp.src('app/img/**/*.+(png|jpg|jpeg|gif|svg)')
+  return gulp.src('app/img/**/*.+(png|jpg|jpeg|gif|svg|mp4)')
     .pipe(gulp.dest('dist/img'))
 });
 

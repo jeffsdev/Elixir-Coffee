@@ -1,0 +1,40 @@
+// blogpost read more buttons
+#blogposts {
+  .readmore {
+    display: block;
+    background: $coffee-brown;
+    color: $light-tan;
+    width: 150px;
+    padding: 10px 0;
+    margin: 1rem auto;
+    text-align: center;
+    &:hover {
+      background: $coffee-light;
+    }
+    &:active {
+      background: lighten($coffee-light, 20%);
+    }
+  }
+}
+
+//contact-form ghost button
+#contact-form {
+  button {
+    display: block;
+    color: $coffee-light;
+    border: 1px solid $coffee-light;
+    padding: 10px;
+    text-align: right;
+    margin: auto;
+    &:hover {
+      background: $coffee-dark;
+      color: $light-tan;
+    }
+    &:focus {
+      outline: none;
+    }
+    &:active {
+      background: darken($coffee-dark, 15%);
+    }
+  }
+}

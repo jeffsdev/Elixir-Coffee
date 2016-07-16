@@ -11,7 +11,6 @@
   }
   .latest-posts {
     .blogpost {
-      // border: 1px solid red;
       width: 75%;
       margin: 25px auto;
 
@@ -37,21 +36,6 @@
         span {
           font-style: italic;
           color: $coffee-light;
-        }
-        .readmore {
-          display: block;
-          background: $coffee-brown;
-          color: $light-tan;
-          width: 150px;
-          padding: 10px 0;
-          margin: 1rem auto;
-          text-align: center;
-          &:hover {
-            background: $coffee-light;
-          }
-          &:active {
-            background: lighten($coffee-light, 20%);
-          }
         }
         @media screen and #{$lg-mobile} {
           margin-left: 25px;

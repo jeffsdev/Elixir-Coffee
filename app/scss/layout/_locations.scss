@@ -4,8 +4,6 @@
   background-image: url("../img/stone-bw.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  // background-attachment: fixed;
-
   color: $light-tan;
   .locations-content {
     display: flex;
@@ -30,15 +28,10 @@
     @media screen and #{$x-large} {
       padding-right: 5%;
     }
-
   }
-
-
-
   .locations-addresses {
     display: block;
     margin: auto;
-    // border: 1px solid blue;
     h3 {
       margin: 1rem 0;
       text-align: center;

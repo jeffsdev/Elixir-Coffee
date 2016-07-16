@@ -1,0 +1,18 @@
+#contact-form {
+  input, textarea {
+    font-size: 1em;
+    color: $light-tan;
+    font-family: $slabstack;
+    display: block;
+    margin: 0 auto 1rem auto;
+    padding: 10px 0;
+    width: 75%;
+    background: none;
+    border: none;
+    border-bottom: 1px solid darken($light-tan, 50%);
+    &:focus {
+      outline: none;
+      border-color: $coffee-light;
+    }
+  }
+}

@@ -77,8 +77,7 @@ hr {
   display: block;
 }
 
-
-
+// nav burger and it's animations
 .nav-burger {
   display: flex;
   flex-direction: column;
@@ -128,8 +127,7 @@ hr {
 }
 
 
-
-
+// off-canvas menu
 .mobile-menu {
   position: fixed;
   top: 50px;
@@ -141,7 +139,6 @@ hr {
   transform: translate(0px, 0px);
   transition: .60s ease;
   background: $coffee-black;
-
   z-index: 99999999;
   @media screen and #{$tablet} {
     top: 75px;
@@ -210,6 +207,9 @@ hr {
   background: #000;
   opacity: 0.75;
   z-index: 99999;
+  @media screen and #{$desktop} {
+    display: none !important;
+  }
 }
 // prevent scrolling on body when mobile nav is open
 .stick {

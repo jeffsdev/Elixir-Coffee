@@ -1,27 +1,10 @@
-#load {
-  background: #333;
-  width: 100vw;
-  height: 100vh;
-  span {
-    font-size: 8em;
-    color: white;
-  }
-}
-
-
 header {
   position: relative;
-  // min-height: calc(75vh - 75px);
-  // max-height: calc(90vh - 75px);
-  // min-height: 100vh;
-  // max-height: 100vh;
   max-width: 100vw;
-
   background-image: url("../img/coffee-bw.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-
   .hero-content {
     position: absolute;
     display: flex;
@@ -41,7 +24,7 @@ header {
       }
     }
     h2 {
-      font-size: 3em;
+      font-size: 4em;
       color: $coffee-black;
       font-weight: 100;
       text-shadow: 1px 1px 1px $coffee-black;

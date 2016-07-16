@@ -5,7 +5,6 @@
     padding: 25px 2% 50px 2%;
 
     .footer-logo {
-      // border: 1px solid red;
       display: flex;
       margin: auto;
       justify-content: center;
@@ -21,22 +20,14 @@
     }
   }
 
-
   .contact-main {
     display: flex;
     flex-wrap: wrap;
-
-
-
-    h3 {
-      color: $light-tan;
-    }
-    p, span {
+    p, span, h3 {
       color: $light-tan;
     }
     .footer-column {
       @extend .link-hover-underline;
-      // border: 1px solid orange;
       flex: 1 2;
       text-align: center;
       min-width: 40%;
@@ -49,42 +40,6 @@
       }
       @media screen and #{$tablet} {
         min-width: 25%;
-      }
-    }
-    #contact-form {
-      input, textarea {
-        font-size: 1em;
-        color: $light-tan;
-        font-family: $slabstack;
-        display: block;
-        margin: 0 auto 1rem auto;
-        padding: 10px 0;
-        width: 75%;
-        background: none;
-        border: none;
-        border-bottom: 1px solid darken($light-tan, 50%);
-        &:focus {
-          outline: none;
-          border-color: $coffee-light;
-        }
-      }
-      button {
-        display: block;
-        color: $coffee-light;
-        border: 1px solid $coffee-light;
-        padding: 10px;
-        text-align: right;
-        margin: auto;
-        &:hover {
-          background: $coffee-dark;
-          color: $light-tan;
-        }
-        &:focus {
-          outline: none;
-        }
-        &:active {
-          background: darken($coffee-dark, 15%);
-        }
       }
     }
     .footer-social {

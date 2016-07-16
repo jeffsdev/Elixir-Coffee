@@ -1,11 +1,3 @@
-// window.addEventListener("load", function(){
-// 	var load_screen = document.getElementById("load");
-//   setTimeout(function() {
-//   	document.body.removeChild(load_screen);
-//   }, 2000);
-// });
-
-
 $(document).ready(function() {
 
   // Fix for funky fixed background 100vh viewport size re-sizing jumpy bug on mobile browsers
@@ -43,9 +35,10 @@ $(document).ready(function() {
       });
     }
 
-      $('.nav-burger span:nth-child(2)').toggleClass('transparent');
-      $('.nav-burger span:nth-child(1)').toggleClass('rotate-top');
-      $('.nav-burger span:nth-child(3)').toggleClass('rotate-bottom');
+    // toggle nav burger animation
+    $('.nav-burger span:nth-child(2)').toggleClass('transparent');
+    $('.nav-burger span:nth-child(1)').toggleClass('rotate-top');
+    $('.nav-burger span:nth-child(3)').toggleClass('rotate-bottom');
 
   });
 
@@ -61,14 +54,14 @@ $(document).ready(function() {
   var navbarHeight = $('.main-navbar').outerHeight();
 
   $(window).scroll(function(event){
-      didScroll = true;
+    didScroll = true;
   });
 
   setInterval(function() {
-      if (didScroll) {
-          hasScrolled();
-          didScroll = false;
-      }
+    if (didScroll) {
+        hasScrolled();
+        didScroll = false;
+    }
   }, 250);
 
   function hasScrolled() {
@@ -76,17 +69,17 @@ $(document).ready(function() {
 
     // Make sure they scroll more than delta
     if(Math.abs(lastScrollTop - st) <= delta)
-        return;
+      return;
 
     // Hide navbar when scrolling down, and show when scrolling up
     if (st > lastScrollTop && st > navbarHeight){
-        // Scroll Down
-        $('.main-navbar').removeClass('not-hidden').addClass('hidden');
+      // Scroll Down
+      $('.main-navbar').removeClass('not-hidden').addClass('hidden');
     } else {
-        // Scroll Up
-        if(st + $(window).height() < $(document).height()) {
-            $('.main-navbar').removeClass('hidden').addClass('not-hidden');
-        }
+      // Scroll Up
+      if(st + $(window).height() < $(document).height()) {
+        $('.main-navbar').removeClass('hidden').addClass('not-hidden');
+      }
     }
 
     lastScrollTop = st;
@@ -148,8 +141,5 @@ $(document).ready(function() {
       opacity: 0
     }, 600);
   });
-
-
-
 
 });

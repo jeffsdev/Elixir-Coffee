@@ -123,6 +123,49 @@ img {
   max-width: 1400px;
   margin: auto; }
 
+#blogposts .readmore {
+  display: block;
+  background: #4e3b2d;
+  color: #e7e6e2;
+  width: 150px;
+  padding: 10px 0;
+  margin: 1rem auto;
+  text-align: center; }
+  #blogposts .readmore:hover {
+    background: #967762; }
+  #blogposts .readmore:active {
+    background: #c0ac9e; }
+
+#contact-form button {
+  display: block;
+  color: #967762;
+  border: 1px solid #967762;
+  padding: 10px;
+  text-align: right;
+  margin: auto; }
+  #contact-form button:hover {
+    background: #61493d;
+    color: #e7e6e2; }
+  #contact-form button:focus {
+    outline: none; }
+  #contact-form button:active {
+    background: #32261f; }
+
+#contact-form input, #contact-form textarea {
+  font-size: 1em;
+  color: #e7e6e2;
+  font-family: "Josefin Slab", sans-serif;
+  display: block;
+  margin: 0 auto 1rem auto;
+  padding: 10px 0;
+  width: 75%;
+  background: none;
+  border: none;
+  border-bottom: 1px solid #6f6b5b; }
+  #contact-form input:focus, #contact-form textarea:focus {
+    outline: none;
+    border-color: #967762; }
+
 nav {
   position: fixed;
   z-index: 9999999;
@@ -317,17 +360,12 @@ hr {
   background: #000;
   opacity: 0.75;
   z-index: 99999; }
+  @media screen and (min-width: 1024px) {
+    .navshroud {
+      display: none !important; } }
 
 .stick {
   position: fixed; }
-
-#load {
-  background: #333;
-  width: 100vw;
-  height: 100vh; }
-  #load span {
-    font-size: 8em;
-    color: white; }
 
 header {
   position: relative;
@@ -354,7 +392,7 @@ header {
         header .hero-content h1 {
           font-size: 8em; } }
     header .hero-content h2 {
-      font-size: 3em;
+      font-size: 4em;
       color: #191919;
       font-weight: 100;
       text-shadow: 1px 1px 1px #191919; }
@@ -645,18 +683,6 @@ header {
       #blogposts .latest-posts .blogpost .post-meta span {
         font-style: italic;
         color: #967762; }
-      #blogposts .latest-posts .blogpost .post-meta .readmore {
-        display: block;
-        background: #4e3b2d;
-        color: #e7e6e2;
-        width: 150px;
-        padding: 10px 0;
-        margin: 1rem auto;
-        text-align: center; }
-        #blogposts .latest-posts .blogpost .post-meta .readmore:hover {
-          background: #967762; }
-        #blogposts .latest-posts .blogpost .post-meta .readmore:active {
-          background: #c0ac9e; }
       @media screen and (min-width: 480px) {
         #blogposts .latest-posts .blogpost .post-meta {
           margin-left: 25px; } }
@@ -777,9 +803,7 @@ header {
   #contact .contact-main {
     display: flex;
     flex-wrap: wrap; }
-    #contact .contact-main h3 {
-      color: #e7e6e2; }
-    #contact .contact-main p, #contact .contact-main span {
+    #contact .contact-main p, #contact .contact-main span, #contact .contact-main h3 {
       color: #e7e6e2; }
     #contact .contact-main .footer-column {
       flex: 1 2;
@@ -793,34 +817,6 @@ header {
       @media screen and (min-width: 768px) {
         #contact .contact-main .footer-column {
           min-width: 25%; } }
-    #contact .contact-main #contact-form input, #contact .contact-main #contact-form textarea {
-      font-size: 1em;
-      color: #e7e6e2;
-      font-family: "Josefin Slab", sans-serif;
-      display: block;
-      margin: 0 auto 1rem auto;
-      padding: 10px 0;
-      width: 75%;
-      background: none;
-      border: none;
-      border-bottom: 1px solid #6f6b5b; }
-      #contact .contact-main #contact-form input:focus, #contact .contact-main #contact-form textarea:focus {
-        outline: none;
-        border-color: #967762; }
-    #contact .contact-main #contact-form button {
-      display: block;
-      color: #967762;
-      border: 1px solid #967762;
-      padding: 10px;
-      text-align: right;
-      margin: auto; }
-      #contact .contact-main #contact-form button:hover {
-        background: #61493d;
-        color: #e7e6e2; }
-      #contact .contact-main #contact-form button:focus {
-        outline: none; }
-      #contact .contact-main #contact-form button:active {
-        background: #32261f; }
     #contact .contact-main .footer-social img {
       height: 25px;
       margin: 1.125em; }
