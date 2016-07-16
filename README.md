@@ -2,8 +2,8 @@
 ##### Jeff Seymour
 ##### July 2016
 
-### Description
-###### This is a website for a coffee shop that I designed and coded. (WORK IN PROGRESS)  
+## Description
+##### This is a website for a coffee shop that I designed and coded.   
 
 
 ### Dependencies
@@ -22,4 +22,3 @@ View in browser at localhost:3000
 
 ### License
 Copyright 2016 - Jeff Seymour
-The code is available under the [MIT License](LICENSE.md).
