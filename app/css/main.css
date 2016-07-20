@@ -568,8 +568,11 @@ header {
       display: block;
       font-size: 1.5em;
       margin-top: 1em; }
-    #quotes .quotes-content p {
-      font-size: 1.25em; }
+    #quotes .quotes-content h4 {
+      font-size: 1.25em;
+      font-weight: normal;
+      line-height: 1.25em;
+      margin: 8px 0; }
 
 #ourteam {
   background: #e7e6e2;
