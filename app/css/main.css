@@ -180,7 +180,8 @@ nav {
   nav .brand {
     display: flex;
     align-items: center;
-    height: 100%; }
+    height: 100%;
+    margin-right: auto; }
     nav .brand a {
       display: flex;
       align-items: center;
