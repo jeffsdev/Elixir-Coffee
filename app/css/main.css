@@ -437,6 +437,8 @@ header {
     order: 2;
     width: 100%;
     align-items: center; }
+    #about .about-img img {
+      flex: 1 1 100%; }
     @media screen and (min-width: 768px) {
       #about .about-img {
         order: 1;
@@ -666,7 +668,8 @@ header {
     float: right; }
   #blogposts .latest-posts .blogpost {
     width: 75%;
-    margin: 25px auto; }
+    margin: 25px auto;
+    height: 100%; }
     #blogposts .latest-posts .blogpost img {
       margin-bottom: 1rem; }
       @media screen and (min-width: 480px) {

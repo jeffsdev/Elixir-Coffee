@@ -10,6 +10,9 @@
     order: 2;
     width: 100%;
     align-items: center;
+    img {
+      flex: 1 1 100%;
+    }
     @media screen and #{$tablet} {
       order: 1;
       width: 50%;

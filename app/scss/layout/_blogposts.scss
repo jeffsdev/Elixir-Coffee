@@ -13,7 +13,7 @@
     .blogpost {
       width: 75%;
       margin: 25px auto;
-
+      height: 100%;
       img {
         margin-bottom: 1rem;
         @media screen and #{$lg-mobile} {
